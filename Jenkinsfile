@@ -13,7 +13,8 @@ pipeline
         stage("Start")
         {
             steps
-            {                
+            {       
+         
                 echo "Contact SUCCESSFUL - huaaa"
             }
         }
