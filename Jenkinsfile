@@ -15,7 +15,7 @@ pipeline
             steps
             {       
          
-                echo "Contact SUCCESSFUL - huaaa"
+                echo "Contact SUCCESSFUL - mang!"
             }
         }
     }
