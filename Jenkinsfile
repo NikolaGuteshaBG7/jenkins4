@@ -16,7 +16,18 @@ pipeline
                     sh 'npm install'
                 }
             }
-        }                
+        }              
+        stage("Package audit")// installing all npm necessary packages
+        {
+            steps
+            {                
+                echo "Auditing npm packages"
+                nodejs('Node16.2.0')
+                {
+                    sh 'npm audit'
+                }
+            }
+        }           
         stage("Build Front End")
         {
             steps
@@ -28,17 +39,32 @@ pipeline
                 }
             }
         }
-        stage("Build Back End")
+        stage("Test")
         {
             steps
             {                
-                echo "Building BE part"
+                echo "testing....."
+                /*
+                nodejs('Node16.2.0')
+                {
+                    sh 'npm run build'
+                }*/
+            }
+        }
+
+
+        /*
+        stage("Start applcation")
+        {
+            steps
+            {                
+                echo "Starting Application"
                 nodejs('Node16.2.0')
                 {
                     sh 'npm start'
                 }
             }
-        }
+        }*/
     }
 
 }
