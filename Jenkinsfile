@@ -9,7 +9,8 @@ pipeline
             {                
                 echo "Contact SUCCESSFUL - huaaa"
             }
-        }        
+        }       
+         
         stage("Start")
         {
             steps
