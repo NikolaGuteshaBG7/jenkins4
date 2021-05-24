@@ -54,6 +54,7 @@ pipeline
 
 
         /*
+
         stage("Start applcation")
         {
             steps
