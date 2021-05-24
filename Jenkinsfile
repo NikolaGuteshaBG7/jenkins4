@@ -28,11 +28,11 @@ pipeline
                 }
             }
         }
-        stage("Build Back End")
+        stage("Start applcation")
         {
             steps
             {                
-                echo "Building BE part"
+                echo "Starting Application"
                 nodejs('Node16.2.0')
                 {
                     sh 'npm start'
